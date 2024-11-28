@@ -11,23 +11,21 @@ function Navbar() {
             <Image src="/lafise_logo.png" alt="logo" width={100} height={50} />
           </Link>
         </div>
-
-        {/* Navigation Links */}
         <div className="md:flex space-x-4 navigation-link">
           <Link
-            href="/"
+            href="/obtener_cuenta"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Obtener cuentas
           </Link>
           <Link
-            href="/about"
+            href="/transferencia"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Transferencia entre cuentas
           </Link>
           <Link
-            href="/services"
+            href="/historial"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Historial de transacciones

@@ -28,7 +28,15 @@ body {
 {
   background-color: #018a67;
 }
-
+.main-obtener 
+{
+  margin: 1em;
+}
+.main-obtener h1 
+{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 @media(max-width:600px)
 {
   .navigation-link
