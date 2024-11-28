@@ -7,25 +7,25 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo/Brand */}
         <div className="text-white text-xl font-bold">
-          <Link href="/">
+          <Link href="/getAccount">
             <Image src="/lafise_logo.png" alt="logo" width={100} height={50} />
           </Link>
         </div>
         <div className="md:flex space-x-4 navigation-link">
           <Link
-            href="/obtener_cuenta"
+            href="/getAccount"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Obtener cuentas
           </Link>
           <Link
-            href="/transferencia"
+            href="/transactions"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Transferencia entre cuentas
           </Link>
           <Link
-            href="/historial"
+            href="/movements"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Historial de transacciones

@@ -1,0 +1,35 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenBanking LAFISE Sandbox",
+    "version": "unknown"
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.lafise.com"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "paths": {},
+  "x-readme": {
+    "headers": [
+      {
+        "key": "x-api-key",
+        "value": "G3yCDUD91N4nW6YghwTdjJoA32gauL36pq2mWZH1"
+      }
+    ]
+  },
+  "x-readme-fauxas": true
+}
