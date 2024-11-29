@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import TransactionsDiv from "@/components/TransactionsDiv";
+import Navbar from "@/components/navbar";
+import TransactionsDiv from "@/components/transactions-div";
 import Link from "next/link";
 const transactionsTypes = [
   {

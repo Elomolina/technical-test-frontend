@@ -13,7 +13,7 @@ function Navbar() {
         </div>
         <div className="md:flex space-x-4 navigation-link">
           <Link
-            href="/getAccount"
+            href="/get-account"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Obtener cuentas

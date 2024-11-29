@@ -3,11 +3,13 @@ import clientNumber from "@/context/clientNumber";
 
 interface InputProps {
   label: string;
-  onChange: (event: React.ChangeEvent) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   clientNumber: string;
+  name: string;
+  type: string;
 }
 
-const Input = ({ label, onChange, clientNumber }: InputProps) => {
+const Input = ({ label, onChange, clientNumber, name, type }: InputProps) => {
   return (
     <>
       <section>
@@ -17,10 +19,12 @@ const Input = ({ label, onChange, clientNumber }: InputProps) => {
         >
           {label}
         </label>
+
         <input
+          name={name}
           value={clientNumber}
           className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          type="text"
+          type={type}
           id="customerID"
           placeholder={label}
           onChange={onChange}
