@@ -1,9 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import Navbar from "@/components/Navbar";
 const thirdPartyAccount = () => {
   return (
-    <div>third-party-accounts</div>
-  )
-}
+    <>
+      <Navbar />
+      <div>third-party-accounts</div>
+    </>
+  );
+};
 
-export default thirdPartyAccount
+export default thirdPartyAccount;

@@ -1,9 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import Navbar from "@/components/Navbar";
 const services = () => {
   return (
-    <div>services</div>
-  )
-}
+    <>
+      <Navbar />
+      <div>services</div>
+    </>
+  );
+};
 
-export default services
+export default services;
