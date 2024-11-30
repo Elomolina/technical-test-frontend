@@ -10,7 +10,7 @@ To run a Next.js project you need to have installed [Node.js](https://nodejs.org
 ### Clone the git project
 
 ```bash
-git clone https://github.com/Elomolina/prueba-tecnica-lafise.git
+https://github.com/Elomolina/technical-test-frontend.git
 ```
 
 ### Install dependencies
