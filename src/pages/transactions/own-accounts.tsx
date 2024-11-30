@@ -39,16 +39,18 @@ const ownAccounts = () => {
       typeof value === "string" ? value.trim() !== "" : true
     );
     setIsValid(formValid);
-    const fetchTransaction = async () => {
-      const data = await fetchOwnAccountsTransaction(formValues);
-      console.log(data);
-      if (data.status === "Success") {
-        setDataSent("success");
-      } else {
-        setDataSent("initialized");
-      }
-    };
-    fetchTransaction();
+    if (formValid) {
+      const fetchTransaction = async () => {
+        const data = await fetchOwnAccountsTransaction(formValues);
+        console.log(data);
+        if (data.status === "Success") {
+          setDataSent("success");
+        } else {
+          setDataSent("initialized");
+        }
+      };
+      fetchTransaction();
+    }
   };
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -123,7 +125,10 @@ const ownAccounts = () => {
         </form>
       </section>
       {!isValid ? (
-        <Alert message="Completa los campos para continuar" type="error" />
+        <Alert
+          message="Completa los campos para realizar transacción"
+          type="error"
+        />
       ) : (
         <Alert message="Datos completados" type="success" />
       )}

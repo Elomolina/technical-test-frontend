@@ -17,6 +17,15 @@ export const fetchAccountDetailsByID = async (accountNumber: number) => {
   }
   return response.json();
 };
+export const fetchAccountTransactions = async (accountNumber: number) => {
+  const response = await fetch(`/api/movements?accountNumber=${accountNumber}`);
+  if (!response.ok) {
+    throw new Error(
+      `No se pudo obtener información para la cuenta ${accountNumber}`
+    );
+  }
+  return response.json();
+};
 
 export const fetchOwnAccountsTransaction = async (formValues: {}) => {
   const response = await fetch(`/api/sentOwnAccountTransaction`, {

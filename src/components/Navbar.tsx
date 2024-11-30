@@ -7,7 +7,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo/Brand */}
         <div className="text-white text-xl font-bold">
-          <Link href="/getAccount">
+          <Link href="/get-account">
             <Image src="/lafise_logo.png" alt="logo" width={100} height={50} />
           </Link>
         </div>
