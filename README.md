@@ -27,6 +27,6 @@ npm run dev
 ### Environment variables
 
 To execute the project you need to create a `.env.local` file, where you need to specify the `API_KEY` and the `AUTH_TOKEN`
-For the `AUTH_TOKEN` use the Bearer authorization token found in the [LAFISE API Reference](https://apidocs.lafise.com/reference/using-oauth2)
-The `API_KEY` is the same for every endpoint, you can find it as `x-api-key` in the [docs](https://apidocs.lafise.com/reference/get-account-by-costumer-id)
+For the `AUTH_TOKEN` use the Bearer authorization token found in the [LAFISE API Reference](https://apidocs.lafise.com/reference/using-oauth2).
+The `API_KEY` is the same for every endpoint, you can find it as `x-api-key` in the [docs](https://apidocs.lafise.com/reference/get-account-by-costumer-id).
 Check the `.env.example` file as an example of how your env file should look like.
