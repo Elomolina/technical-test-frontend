@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { Head } from "next/document";
+import { log } from "console";
 
 export default async function handler(
   req: NextApiRequest,
@@ -14,29 +15,41 @@ export default async function handler(
       conceptoCredito,
     } = req.body;
 
-    const data = await getAccountByID("100200");
+    const data = await sentOwnAccountTransaction(
+      cuentaOrigen,
+      cuentaDestino,
+      monto,
+      conceptoCredito,
+      conceptoDebito
+    );
     res.status(200).json(data);
   }
 }
 
-export async function getAccountByID(accountNumber: string) {
-  const url = `https://api-sandbox.lafise.com/obl/v1/banks/BLNI/accounts/${accountNumber}/1/transaction-request-types/FREE_FORM/transaction-requests`;
+export async function sentOwnAccountTransaction(
+  cuentaOrigen: number,
+  cuentaDestino: number,
+  monto: string,
+  conceptoDebito: string,
+  conceptoCredito: string
+) {
+  const url = `https://api-sandbox.lafise.com/obl/v1/banks/BLNI/accounts/${cuentaOrigen}/1/transaction-request-types/FREE_FORM/transaction-requests`;
   const payload = {
     transfer_type: "OwnAccounts",
-    debit_description: "Debit description",
+    debit_description: conceptoDebito,
     to_transfer_to_own_accounts: {
-      credit_description: "Credit description",
+      credit_description: conceptoCredito,
       to: {
-        name: "Beneficiary Name",
+        name: "",
         bank_code: "BLNI",
         account: {
-          number: "100200300",
+          number: cuentaDestino,
           iban: "",
         },
       },
       value: {
         currency: "NIO",
-        amount: -100.0,
+        amount: monto,
       },
     },
   };

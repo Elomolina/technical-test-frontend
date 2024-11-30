@@ -76,6 +76,12 @@ section h1 {
   color: white;
   font-size: 1rem;
 }
+.text 
+{
+  margin-top: 1em;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
 .sendButton {
   color: white;
   margin-left: 1em;
@@ -87,6 +93,10 @@ section h1 {
 .sendButton:disabled {
   background-color: rgb(175, 175, 175);
   cursor: not-allowed;
+}
+.dropdown {
+  margin-left: 1em;
+  width: 95%;
 }
 @media (max-width: 800px) {
   .navigation-link {

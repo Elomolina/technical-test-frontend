@@ -17,3 +17,17 @@ export const fetchAccountDetailsByID = async (accountNumber: number) => {
   }
   return response.json();
 };
+
+export const fetchOwnAccountsTransaction = async (formValues: {}) => {
+  const response = await fetch(`/api/sentOwnAccountTransaction`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formValues),
+  });
+  if (!response.ok) {
+    throw new Error(`No se pudo realizar la transaccion`);
+  }
+  return response.json();
+};
