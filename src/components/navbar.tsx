@@ -19,7 +19,7 @@ function Navbar() {
             Obtener cuentas
           </Link>
           <Link
-            href="transactions/own-accounts"
+            href="/transactions/own-accounts"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded-md"
           >
             Transferencia entre cuentas propias
