@@ -4,7 +4,7 @@ This project consumes endpoints from the Lafise API to display a user's accounts
 
 ## Getting Started
 
-To run a Next.js project you need to have installed Node.js first.
+To run a Next.js project you need to have installed [Node.js](https://nodejs.org/en/) first.
 
 ### Clone the git project
 
